@@ -1,16 +1,15 @@
-
 function convertToJson(res) {
   if (res.ok) {
     return res.json();
   } else {
-    throw new Error('Bad Response');
+    throw new Error("Bad Response");
   }
 }
 
 export default class ProductData {
   constructor(category) {
     this.category = category;
-    this.path = `../public/json/${this.category}.json`;
+    this.path = `./json/${this.category}.json`;
   }
   getData() {
     return fetch(this.path)
@@ -18,10 +17,7 @@ export default class ProductData {
       .then((data) => data);
   }
   async findProductById(id) {
-    if (!id) {
-      return null;
-    }
     const products = await this.getData();
-    return products.find((item) => item.Id.toLowerCase() === id.toLowerCase());
+    return products.find((item) => item.Id === id);
   }
 }
