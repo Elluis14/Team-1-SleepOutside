@@ -46,6 +46,9 @@ function productDetailsTemplate(product) {
   document.getElementById("addToCart").dataset.id = product.Id;
 }
 
+
+
+
 // ************* Alternative Display Product Details Method *******************
 // function productDetailsTemplate(product) {
 //   return `<section class="product-detail"> <h3>${product.Brand.Name}</h3>
