@@ -329,3 +329,47 @@ footer {
   color: var(--dark-grey);
   margin: 0;
 }
+
+#productPrice {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5em;
+  padding: 0.75rem;
+}
+
+/* El precio con descuento (color verde de tu variable secundaria) */
+.discount-price {
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+/* El precio original tachado */
+.original-price {
+  color: var(--light-grey);
+  font-size: 0.8em;
+  text-decoration: line-through;
+}
+
+/* La etiqueta roja de porcentaje */
+.discount-badge {
+  background-color: #d9534f; /* Color de alerta/oferta */
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.7em;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Animación opcional para llamar la atención sobre el descuento */
+.discount-badge {
+  animation: subtle-pulse 2s infinite;
+}
+
+@keyframes subtle-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
