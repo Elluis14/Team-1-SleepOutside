@@ -1,20 +1,35 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sleep Outside | Checkout</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
   <script src="../js/checkout.js" type="module"></script>
 </head>
 
 <body>
-  <header class="divider" id="main-header"></header>
+  <header class="divider">
+    <div class="logo">
+      <img src="images/noun_Tent_2517.svg" alt="tent image for logo" />
+      <a href="index.html">
+        Sleep <span class="highlight">Outside</span>
+      </a>
+    </div>
+
+    <div class="cart">
+      <a href="cart/">
+        <!-- SVG ICON -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+          <!-- SVG paths unchanged -->
+        </svg>
+      </a>
+    </div>
+  </header>
 
   <main class="divider checkout">
     <h2>Review & Place your Order</h2>
+
     <section class="checkout-form">
       <form name="checkout">
         <input type="hidden" name="orderDate" id="orderDate">
@@ -27,6 +42,7 @@
             <label for="lname">Last Name</label>
             <input type="text" name="lname" id="lname" required>
           </div>
+
           <div class="checkout__address">
             <label for="street">Street Address</label>
             <input type="text" name="street" id="street" required>
@@ -67,12 +83,14 @@
             <div id="orderTotal"></div>
           </div>
         </fieldset>
+
         <button type="submit" id="checkoutSubmit">Checkout</button>
       </form>
     </section>
   </main>
 
-  <footer id="main-footer"></footer>
+  <footer>
+    &copy;2025 ⛺ SleepOutside ⛺ WDD 330 ⛺ BYU-Idaho for BYU-Pathway Worldwide Online
+  </footer>
 </body>
-
 </html>

@@ -13,6 +13,19 @@ function formDataToJSON(formElement) {
   return convertedJSON;
 }
 
+function packageItems(items) {
+  const simplifiedItems = items.map((item) => {
+    console.log(item);
+    return {
+      id: item.Id,
+      price: item.FinalPrice,
+      name: item.Name,
+      quantity: 1,
+    };
+  });
+  return simplifiedItems;
+}
+
 export default class CheckoutProcess {
   constructor(key, outputSelector) {
     this.key = key;
@@ -87,17 +100,4 @@ export default class CheckoutProcess {
       console.log(err);
     }
   }
-}
-
-function packageItems(items) {
-  const simplifiedItems = items.map((item) => {
-    console.log(item);
-    return {
-      id: item.Id,
-      price: item.FinalPrice,
-      name: item.Name,
-      quantity: 1,
-    };
-  });
-  return simplifiedItems;
 }
