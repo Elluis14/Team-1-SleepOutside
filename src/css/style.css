@@ -373,3 +373,11 @@ footer {
   50% { transform: scale(1.05); }
   100% { transform: scale(1); }
 }
+
+.breadcrumb-container {
+  padding: 10px 20px;
+  background-color: #f8f8f8;
+  font-size: 0.9rem;
+  color: #555;
+  text-transform: capitalize; /* Para que 'tents' se vea como 'Tents' */
+}

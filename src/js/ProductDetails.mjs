@@ -26,4 +26,11 @@ function productDetailsTemplate(product) {
   document.getElementById("productColor").textContent = product.Colors[0].ColorName;
   document.getElementById("productDesc").innerHTML = product.DescriptionHtmlSimple;
   document.getElementById("addToCart").dataset.id = product.Id;
+
+  // Dentro de la función que carga los detalles del producto
+const breadcrumbElement = document.getElementById('breadcrumb');
+if (breadcrumbElement) {
+  // Formato: Solo la categoría
+  breadcrumbElement.innerHTML = `${product.Category}`;
+}
 }
